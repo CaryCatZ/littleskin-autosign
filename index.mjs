@@ -69,7 +69,7 @@ async function main() {
 			await task();
 			break;
 		} catch (err) {
-			console.error(`Attempt ${i + 1} failed.`);
+			console.error(`Attempt ${i + 1} failed. ${err.message} ${err.response.data.message}`);
 			if (i < max_retry - 1) {
 				await sleep(10000); // 10 seconds
 			} else {
