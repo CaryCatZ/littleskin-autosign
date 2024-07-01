@@ -80,7 +80,7 @@ async function main() {
 }
 
 main().catch(err => {
-	console.log('Error');
+	console.log(err.message);
 	process.exit(1);
 });
 
