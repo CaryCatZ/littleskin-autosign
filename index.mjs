@@ -68,7 +68,7 @@ async function main() {
 		try {
 			await task();
 			break;
-		} catch(err) {
+		} catch (err) {
 			console.error(`Attempt ${i + 1} failed.`);
 			if (i < max_retry - 1) {
 				await sleep(10000); // 10 seconds
